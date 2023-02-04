@@ -15,14 +15,18 @@ function buttonClick(e) {
    }
 }
 
+
+const allTypesWork = document.querySelectorAll('.repairs-sidebar__link');
 document.addEventListener('click', linkClick);
 function linkClick(e) {
    const targetItem3 = e.target;
-   
-   
-   if  (targetItem3.closest('.repairs-sidebar__link'))  {
+   if (targetItem3.closest('.repairs-sidebar__link')) {
+      for (let i = 0; i < allTypesWork.length; i++) {
+         allTypesWork[i].classList.remove('done');
+      }
       e.preventDefault();
       targetItem3.classList.toggle('done');
+      
    }
 }
 
