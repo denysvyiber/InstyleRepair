@@ -15,4 +15,15 @@ function buttonClick(e) {
    }
 }
 
+document.addEventListener('click', linkClick);
+function linkClick(e) {
+   const targetItem3 = e.target;
+   
+   
+   if  (targetItem3.closest('.repairs-sidebar__link'))  {
+      e.preventDefault();
+      targetItem3.classList.toggle('done');
+   }
+}
+
 

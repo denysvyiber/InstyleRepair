@@ -115,6 +115,11 @@ body {
   color: rgba(0, 0, 0, 0.5);
   font-weight: 600;
   font-size: 16px;
+  transition: all 0.3s ease 0s;
+}
+.button-sidebar:hover {
+  transform: scale(0.98);
+  border-color: #8e8e8e;
 }
 .button-sidebar._active-button {
   background: #BBBBBB;
@@ -122,6 +127,11 @@ body {
   color: #000000;
   font-weight: 700;
   font-size: 16px;
+}
+
+.done {
+  color: #000;
+  font-weight: 500;
 }
 
 .header {
@@ -140,12 +150,12 @@ body {
   padding-bottom: 5px;
 }
 .header__logo {
-  flex: 0 0 20.408163%;
-  max-width: 20.408163%; /* 300px/1440 */
+  flex: 0 0 200px;
+  max-width: 200px; /* 300px/1440 */
   min-width: 200px; /* 300px/1440 */
   display: flex;
   align-items: center;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700;
   justify-content: center;
   position: relative;
@@ -157,7 +167,7 @@ body {
 }
 @media (max-width: 1100px) {
   .header__logo {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
   }
 }
@@ -342,7 +352,7 @@ body {
 }
 .menu__list-exit:hover {
   transform: scale(1.05);
-  color: rgb(174, 172, 172);
+  color: rgb(250, 88, 88);
 }
 @media (max-width: 1100px) {
   .menu__list-exit {
@@ -491,6 +501,10 @@ body {
 }
 .repairs-sidebar__link {
   display: block;
+  transition: all 0.3s ease 0s;
+}
+.repairs-sidebar__link:hover {
+  text-decoration: underline;
 }
 
 .shops-sidebar {
