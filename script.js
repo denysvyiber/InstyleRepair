@@ -26,7 +26,7 @@ function linkClick(e) {
       }
       e.preventDefault();
       targetItem3.classList.toggle('done');
-      
+
    }
 }
 
