@@ -625,6 +625,12 @@ body {
   gap: 5px;
   flex: 0 1 6.531532%; /* 128/1110px */
 }
+.body-item__repair-details.worranty {
+  background: url("/img/main/warranty.svg");
+  background-repeat: no-repeat;
+  background-position: 0px -15px;
+  background-size: 70px 50px;
+}
 .body-item__titles {
   margin-left: 20px;
   display: flex;

@@ -189,6 +189,8 @@ body {
 .item-gray {
    background: linear-gradient(89.98deg, #DFECEB 30.53%, rgba(217, 217, 217, 0) 97.3%);
 }
+
+
 // ===============HEADER========================================================================
 
 .header {
@@ -688,6 +690,8 @@ body {
 }
 .body-item {
    display: flex;
+
+   
    &__repair-details {
       background: #FFFFFF;
       border: 1px solid rgba(0, 0, 0, 0.7);
@@ -699,6 +703,12 @@ body {
       text-align: center;
       gap: 5px;
       flex: 0 1 6.531532%; /* 128/1110px */
+      &.worranty{
+         background: url('/img/main/warranty.svg');
+         background-repeat: no-repeat;
+         background-position: -0px -15px;
+         background-size: 70px 50px;
+      }
    }
 
    &__titles {
@@ -728,7 +738,9 @@ body {
    }
 }
 .details-repair {
+   
 
+   // background-size: cover;
    &__number {
       font-weight: 700;
       font-size: 20px;
