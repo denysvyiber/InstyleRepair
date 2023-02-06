@@ -1,3 +1,4 @@
+//adding class "menu-open" to HTML for displaying burger-menu
 document.addEventListener('click', documentClick);
 function documentClick(e) {
    const targetItem = e.target;
@@ -7,6 +8,7 @@ function documentClick(e) {
    }
 }
 
+//making buttons of sidebar active
 document.addEventListener('click', buttonClick);
 function buttonClick(e) {
    const targetItem2 = e.target;
@@ -15,7 +17,7 @@ function buttonClick(e) {
    }
 }
 
-
+//making active types of works
 const allTypesWork = document.querySelectorAll('.repairs-sidebar__link');
 document.addEventListener('click', linkClick);
 function linkClick(e) {
@@ -29,5 +31,27 @@ function linkClick(e) {
 
    }
 }
+// ----------------------------------------------------------
+//adding class "display" for displaying popUpWindow
+const allDetailsRepair = document.querySelectorAll('.details-repair');
+const zatemnenny = document.querySelector('.zatemnenny');
+const zatemnennyClose = document.querySelector('.zatemnenny__close');
+for(let i = 0; i < allDetailsRepair.length; i++){
+allDetailsRepair[i].addEventListener('click', displayPopUp);
+function displayPopUp() {
+      zatemnenny.classList.add('display');
+      document.documentElement.classList.add('display');
+}
+}
+//removing class "display" for undisplaying popUpWindow
+zatemnennyClose.addEventListener('click', () => {
+   zatemnenny.classList.remove('display');
+   document.documentElement.classList.remove('display');
+});
+
+
+
+
+
 
 

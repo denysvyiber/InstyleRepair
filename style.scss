@@ -82,6 +82,9 @@ body {
 .menu-open body {
    overflow: hidden;
 }
+.display body {
+   overflow: hidden;
+}
 // ===========================================================================================================
 /* ------------------------------------------- */
 .wrapper {
@@ -103,6 +106,7 @@ body {
 .page {
    flex: 1 1 auto;
 }
+
 
 // =============COMMON=======================================================================
 .title {
@@ -147,8 +151,8 @@ body {
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
    border-radius: 7px;
    font-size: 20px;
-   width: 150px;
-   height: 27px;
+   width: 100%;
+   height: 17px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -161,7 +165,7 @@ body {
 .button-take{
    background: #43AB6D;
    border: 1px solid #3A915D;
-   height: 42px;
+   height: 22px;
    &:hover{
       transform: scale(0.9);
    }
@@ -189,6 +193,58 @@ body {
 .item-gray {
    background: linear-gradient(89.98deg, #DFECEB 30.53%, rgba(217, 217, 217, 0) 97.3%);
 }
+// ==============================================================================================
+.display .zatemnenny {
+      display: block;
+}
+.zatemnenny {
+   background: rgba(102, 102, 102, 0.5);
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: none;
+ 
+   &__vikno {
+   width: 500px;
+   height: 300px;
+   text-align: center;
+   padding: 15px;
+   border: 3px solid #0000cc;
+   border-radius: 10px;
+   color: #0000cc;
+   background: #fff;
+   display: flex;
+   flex-direction: column;
+   gap: 100px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   margin: auto;
+   z-index: 2;
+   }
+
+   &__close {
+   // display: inline-block;
+   width: 100px;
+   margin: 0 auto;
+   border: 1px solid #0000cc;
+   color: #0000cc;
+   padding: 10px 12px;
+   text-decoration: none;
+   background: #f2f2f2;
+   font-size: 14pt;
+   cursor:pointer;
+   &:hover{
+      background: #e6e6ff;
+   }
+   }
+}
+
+
 
 
 // ===============HEADER========================================================================
@@ -379,7 +435,8 @@ body {
       position: relative;
       // min-height: 90px;
       overflow: hidden;
-      
+     
+
       &::before,
       &::after{
          content:"";
@@ -422,6 +479,7 @@ body {
          transform: scale(1.05);
          color: rgb(174, 172, 172);
       }
+       
    }
 
    &__list-exit {
@@ -453,6 +511,7 @@ body {
 .menu-open .menu__body::before {
    left: 0;
 }
+
 
 
 .icon-menu {
@@ -653,10 +712,11 @@ body {
 
 // ========Main-Content===========================================================================================
 
+
 .main-content {
    padding: 10px 20px 10px 210px;
    background-color: #fff;
-   height: 92.6vh;
+   min-height: 88vh;  
    overflow: auto;
    &__items {
       display: flex;
@@ -670,20 +730,32 @@ body {
 .item-main-content {
    border: 1px solid rgba(139, 136, 136, 0.7);
    border-radius: 20px;
-   padding: 7px 15px;
+   padding: 3px 15px;
    display: flex;
    flex-direction: column;
-   gap: 7px;
-   min-height: 100px;
-   max-height: 100px;
+   gap: 3px;
+   min-height: 60px;
+   max-height: 60xp;
    &__body {
    }
 
    &__statusbar {
-      width: 100%;
-      img{
-         min-width: 100%;
-         max-width: 100%;
+      // width: 100%;
+      background: #f5f3fe;
+      position: relative;
+      height: 5px;
+      border: 1px solid #000;
+      border-radius: 15px;
+      overflow: hidden;
+      span{
+         position: absolute;
+         height: 100%;
+         top: 0;
+         left: 0;
+         background-color: yellow;
+         
+         // width:50%;
+         
       }
    }
    
@@ -696,19 +768,16 @@ body {
       background: #FFFFFF;
       border: 1px solid rgba(0, 0, 0, 0.7);
       border-radius: 20px;
-      padding: 10px 30px;
+      padding: 5px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      gap: 5px;
+      gap: 2px;
       flex: 0 1 6.531532%; /* 128/1110px */
-      &.worranty{
-         background: url('../img/main/warranty.svg');
-         background-repeat: no-repeat;
-         background-position: -0px -15px;
-         background-size: 70px 50px;
-      }
+      line-height: 111%;
+      
+      
    }
 
    &__titles {
@@ -716,10 +785,12 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 6px;
+      gap: 2px;
+      line-height: 111%;
       font-weight: 600;
-      font-size: 16px;
-      flex: 0 1 10.810811%; /* 120/1110px */
+      font-size: 10px;
+      flex: 0 1 7.810811%; /* 120/1110px */
+      
    }
 
    &__parameters {
@@ -727,28 +798,44 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 6px;
-      flex: 0 1 59.545455%; /* 600/1100px */
+      gap: 2px;
+      line-height: 111%;
+      flex: 0 1 62.545455%; /* 600/1100px */
+      font-weight: 400;
+      font-size: 10px;
+      
+      &.worranty{
+         background: url('/img/main/warranty.svg');
+         background-repeat: norepeat;
+         background-position: 250px center;
+         background-size: 100% 100%;
+      }
+      
    }
 
    &__actions {
       margin: 0 auto;
       flex: 0 1 13.513514%; /* 150/1110px */
       
+      
    }
 }
 .details-repair {
-   
+   cursor: pointer;
+   transition: all 0.3s ease 0s;
+   &:hover{
+      transform: scale(0.97);
+   }
 
    // background-size: cover;
    &__number {
       font-weight: 700;
-      font-size: 20px;
+      font-size: 14px;
    }
 
    &__shop {
       font-weight: 400;
-      font-size: 16px;
+      font-size: 12px;
    }
 }
 .titles-item {
@@ -764,8 +851,7 @@ body {
 }
 .parameters-item {
   
-   font-weight: 400;
-   font-size: 16px;
+   
    
    &__model-parameter {
    }
@@ -774,7 +860,7 @@ body {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      width: 670px
+      width: 700px
       
      
    }
@@ -791,13 +877,14 @@ body {
    &__times {
       display: flex;
       margin-left: 60px;
-      gap: 5px;
+      gap: 3px;
       
    }
 
    &__label {
       font-weight: 600;
-      font-size: 16px;
+      font-size: 10px;
+      line-height: 111%;
    }
 
    &__starttime {
@@ -806,7 +893,8 @@ body {
 
    &__label2 {
       font-weight: 600;
-      font-size: 16px;
+      font-size: 10px;
+      line-height: 111%;
    }
 
    &__endtime {
@@ -816,18 +904,18 @@ body {
 display: flex;
 flex-direction: column;
 justify-content: center;
-gap: 6px;
+gap: 2px;
 // margin: 0 auto;
 
    &__worker {
-      font-weight: 500;
-      font-size: 24px;
+      font-weight: 600;
+      font-size: 12px;
       text-align: center;
    }
 
    &__button {
       font-weight: 600;
-      font-size: 20px;
+      font-size: 12px;
       color: #fff;
      
    }
