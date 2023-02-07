@@ -194,53 +194,331 @@ body {
    background: linear-gradient(89.98deg, #DFECEB 30.53%, rgba(217, 217, 217, 0) 97.3%);
 }
 // ==============================================================================================
-.display .zatemnenny {
+.display .popUp {
       display: block;
 }
-.zatemnenny {
-   background: rgba(102, 102, 102, 0.5);
+
+// ================PopUP============================================================================
+.popUp {
+   background: rgba(102, 102, 102, 0.6);
    width: 100%;
    height: 100%;
    position: absolute;
    top: 0;
    left: 0;
    display: none;
- 
-   &__vikno {
-   width: 500px;
-   height: 300px;
-   text-align: center;
-   padding: 15px;
-   border: 3px solid #0000cc;
-   border-radius: 10px;
-   color: #0000cc;
-   background: #fff;
-   display: flex;
-   flex-direction: column;
-   gap: 100px;
-   position: fixed;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
-   margin: auto;
-   z-index: 2;
+   &__window {
+      width: 500px;
+      height: 475px;
+      // text-align: center;
+      padding: 20px 60px;
+      // border: 3px solid #000;
+      box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      color: #000;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: 60px auto auto auto;
+      z-index: 2;
+   }
+
+   &__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+   }
+
+   &__body {
+      display: flex;
+      margin-bottom: 20px;
+   }
+
+   &__malfunction {
+      margin-bottom: 15px;
+   }
+
+   &__notes {
+      margin-bottom: 15px;
+   }
+
+   &__actions {
    }
 
    &__close {
-   // display: inline-block;
-   width: 100px;
-   margin: 0 auto;
-   border: 1px solid #0000cc;
-   color: #0000cc;
-   padding: 10px 12px;
-   text-decoration: none;
-   background: #f2f2f2;
-   font-size: 14pt;
-   cursor:pointer;
-   &:hover{
-      background: #e6e6ff;
    }
+}
+
+.header-popUp {
+   
+   &__worrantyDate {
+   }
+
+   &__worranty {
+      color:#FF0202;
+      font-weight: 600;
+   }
+
+   &__date {
+      font-weight: 500;
+   }
+
+   &__number {
+      display: flex;
+      align-items: flex-end;
+      font-weight: 600;
+   }
+
+   &__shop {
+      display: flex;
+      align-items: flex-end;
+      font-weight: 600;
+   }
+}
+.body-popUp {
+   gap: 70px;
+
+   &__properties {
+      
+   }
+
+   &__values {
+      
+   }
+}
+.properties {
+   font-weight: 500;
+   font-size: 12px;
+  
+   &__status {
+      background-color: #bdbbbb;
+      
+   }
+
+   &__timeOfReceiving {
+      
+   }
+
+   &__timeOfFinishing {
+      background-color: #bdbbbb;
+      
+   }
+
+   &__model {
+      
+   }
+
+   &__password {
+      background-color: #bdbbbb;
+   }
+
+   &__IMEI {
+   }
+
+   &__manager {
+      background-color: #bdbbbb;
+   }
+
+   &__client {
+   }
+}
+.manager-properties {
+   display: flex;
+   gap: 40px;
+   
+   &__title {
+   }
+
+   &__name {
+      font-weight: 400;
+   }
+}
+.client-properties {
+   display: flex;
+   justify-content: space-between;
+   gap: 40px;
+   &__title {
+   }
+
+   &__name {
+      font-weight: 400;
+   }
+}
+.values {
+   font-weight: 400;
+   font-size: 12px;
+  
+   &__status {
+      background-color: #bdbbbb;
+   }
+
+   &__timeOfReceiving {
+   }
+
+   &__timeOfFinishing {
+      background-color: #bdbbbb;
+   }
+
+   &__model {
+   }
+
+   &__password {
+      background-color: #bdbbbb;
+   }
+
+   &__IMEI {
+   }
+
+   &__master {
+      background-color: #bdbbbb;
+   }
+
+   &__telnumber {
+   }
+}
+.timeOfReceiving {
+   display: flex;
+   gap: 20px;
+   justify-content: space-between;
+   &__time {
+   }
+
+   &__date {
+   }
+}
+.timeOfFinishing {
+   display: flex;
+   gap: 20px;
+   justify-content: space-between;
+   
+   &__time {
+   }
+
+   &__date {
+   }
+}
+.master-value {
+   display: flex;
+   justify-content: space-between;
+   gap: 20px;
+   &__title {
+      font-weight: 500;
+   }
+
+   &__name {
+   }
+}
+.telnumber-value {
+   display: flex;
+   justify-content: space-between;
+   gap: 20px;
+   &__title {
+      font-weight: 500;
+   }
+
+   &__number {
+   }
+}
+.malfunction-popUp {
+
+   &__title {
+      font-weight: 600;
+      margin-bottom: 5px;
+      font-size: 12px;
+   }
+
+   &__text {
+      padding: 5px;
+      font-size: 12px;
+      background: #F2F2F2;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+   }
+}
+.notes-popUp {
+
+   &__title {
+      font-weight: 600;
+      margin-bottom: 5px;
+      font-size: 12px;
+   }
+
+   &__text {
+      padding: 5px;
+      font-size: 12px;
+      background: #F2F2F2;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+   }
+}
+.action-popUp {
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+
+   &__close {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 120px;
+   color: #fff;
+   background:    #435AAB;
+   font-size: 14px;
+   font-weight: 600;
+   padding: 8px 16px;
+   border: 1px solid #5198DA;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   border-radius: 7px;
+   transition:  transform 0.3s ease 0s;
+   // cursor:pointer;
+   &:hover{
+      transform: scale(0.95);
+   }
+   }
+
+   &__history {
+      font-size: 14px;
+      font-weight: 600;
+      width: 120px;
+      padding: 8px 16px;
+      border: 2px solid #F2F2F2;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 7px;
+      transition:  transform 0.3s ease 0s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover{
+         transform: scale(0.95);
+      }
+      background: url('/img/main/history.svg') 0 0 no-repeat;
+   }
+
+   &__answer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+      width: 120px;
+      padding: 8px 16px;
+      border: 2px solid #0188CC;
+      color: #0188CC;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      border-radius: 19px;
+      transition:  transform 0.3s ease 0s;
+      &:hover{
+         transform: scale(0.95);
+      }
+      background: url('/img/main/telegram.svg') 0 0 no-repeat;
+      
    }
 }
 

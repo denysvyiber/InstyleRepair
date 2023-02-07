@@ -34,18 +34,18 @@ function linkClick(e) {
 // ----------------------------------------------------------
 //adding class "display" for displaying popUpWindow
 const allDetailsRepair = document.querySelectorAll('.details-repair');
-const zatemnenny = document.querySelector('.zatemnenny');
-const zatemnennyClose = document.querySelector('.zatemnenny__close');
-for(let i = 0; i < allDetailsRepair.length; i++){
-allDetailsRepair[i].addEventListener('click', displayPopUp);
-function displayPopUp() {
-      zatemnenny.classList.add('display');
+const popUp = document.querySelector('.popUp');
+const popUpClose = document.querySelector('.action-popUp__close');
+for (let i = 0; i < allDetailsRepair.length; i++) {
+   allDetailsRepair[i].addEventListener('click', displayPopUp);
+   function displayPopUp() {
+      popUp.classList.add('display');
       document.documentElement.classList.add('display');
-}
+   }
 }
 //removing class "display" for undisplaying popUpWindow
-zatemnennyClose.addEventListener('click', () => {
-   zatemnenny.classList.remove('display');
+popUpClose.addEventListener('click', () => {
+   popUp.classList.remove('display');
    document.documentElement.classList.remove('display');
 });
 
