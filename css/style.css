@@ -396,7 +396,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("./img/main/history.svg") 0 0 no-repeat;
+  background: url("../img/main/history.svg") 0 0 no-repeat;
 }
 .action-popUp__history:hover {
   transform: scale(0.95);
