@@ -204,12 +204,15 @@ body {
    width: 100%;
    height: 100%;
    position: absolute;
+   z-index: 6;
    top: 0;
    left: 0;
    display: none;
+   
+
    &__window {
       width: 500px;
-      height: 475px;
+      max-height: 475px;
       // text-align: center;
       padding: 20px 60px;
       // border: 3px solid #000;
@@ -226,6 +229,7 @@ body {
       right: 0;
       margin: 60px auto auto auto;
       z-index: 2;
+      overflow:auto;
    }
 
    &__header {
@@ -498,7 +502,7 @@ body {
       &:hover{
          transform: scale(0.95);
       }
-      background: url('/img/main/history.svg') 0 0 no-repeat;
+      background: url('../img/main/history.svg') 0 2px no-repeat;
    }
 
    &__answer {
@@ -517,7 +521,8 @@ body {
       &:hover{
          transform: scale(0.95);
       }
-      background: url('/img/main/telegram.svg') 0 0 no-repeat;
+      background: url('../img/main/telegram.svg') 0 0 no-repeat;
+      position: relative;
       
    }
 }
@@ -1083,7 +1088,7 @@ body {
       font-size: 10px;
       
       &.worranty{
-         background: url('/img/main/warranty.svg');
+         background: url('../img/main/warranty.svg');
          background-repeat: norepeat;
          background-position: 250px center;
          background-size: 100% 100%;
