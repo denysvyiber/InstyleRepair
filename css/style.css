@@ -118,7 +118,7 @@ body {
   align-items: center;
   color: rgba(0, 0, 0, 0.5);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   transition: all 0.3s ease 0s;
 }
 .button-sidebar:hover {
@@ -130,7 +130,7 @@ body {
   border: 1px solid #000000;
   color: #000000;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .done {
@@ -158,6 +158,7 @@ body {
   background: #43AB6D;
   border: 1px solid #3A915D;
   height: 22px;
+  transition: transform 0.3s ease 0s;
 }
 .button-take:hover {
   transform: scale(0.9);
@@ -165,6 +166,7 @@ body {
 
 .button-close {
   background: #435AAB;
+  transition: transform 0.3s ease 0s;
 }
 .button-close:hover {
   transform: scale(0.9);
@@ -437,11 +439,13 @@ body {
   display: flex;
   padding-top: 5px;
   padding-bottom: 5px;
+  padding-right: 20px;
 }
 .header__logo {
   flex: 0 0 200px;
   max-width: 200px; /* 300px/1440 */
   min-width: 200px; /* 300px/1440 */
+  display: inline-block;
   display: flex;
   align-items: center;
   font-size: 20px;
@@ -452,7 +456,7 @@ body {
 }
 .header__logo span {
   font-weight: 300;
-  padding-left: 2px;
+  padding-left: 5px;
 }
 @media (max-width: 1100px) {
   .header__logo {
@@ -503,6 +507,7 @@ body {
   width: 177px;
   height: 27px;
   position: relative;
+  padding-left: 25px;
 }
 .search-header__input input[type=text] {
   background: rgba(0, 0, 0, 0);
@@ -591,6 +596,11 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
+}
+@media (min-width: 1100px) {
+  .menu__list {
+    gap: 60px;
+  }
 }
 .menu__list::before, .menu__list::after {
   content: "";
@@ -742,6 +752,7 @@ body {
   box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   padding: 0 10px;
+  font-size: 14px;
 }
 .sidebar__repairs:not(:last-child) {
   margin-bottom: 10px;
@@ -820,7 +831,7 @@ body {
 .main-content {
   padding: 10px 20px 10px 210px;
   background-color: #fff;
-  min-height: 88vh;
+  min-height: 100vh;
   overflow: auto;
 }
 .main-content__items {
@@ -841,7 +852,7 @@ body {
 .item-main-content__statusbar {
   background: #f5f3fe;
   position: relative;
-  height: 5px;
+  height: 10px;
   border: 1px solid #000;
   border-radius: 15px;
   overflow: hidden;
@@ -851,7 +862,6 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: yellow;
 }
 
 .body-item {
@@ -877,8 +887,8 @@ body {
   justify-content: center;
   gap: 2px;
   line-height: 111%;
-  font-weight: 600;
-  font-size: 10px;
+  font-weight: 700;
+  font-size: 14px;
   flex: 0 1 7.810811%; /* 120/1110px */
 }
 .body-item__parameters {
@@ -889,8 +899,8 @@ body {
   gap: 2px;
   line-height: 111%;
   flex: 0 1 62.545455%; /* 600/1100px */
-  font-weight: 400;
-  font-size: 10px;
+  font-weight: 500;
+  font-size: 14px;
 }
 .body-item__parameters.worranty {
   background: url("../img/main/warranty.svg");
@@ -912,11 +922,11 @@ body {
 }
 .details-repair__number {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
 }
 .details-repair__shop {
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .parameters-item__malfunction-parameter {
@@ -935,13 +945,13 @@ body {
   gap: 3px;
 }
 .passAndTimes__label {
-  font-weight: 600;
-  font-size: 10px;
+  font-weight: 700;
+  font-size: 14px;
   line-height: 111%;
 }
 .passAndTimes__label2 {
-  font-weight: 600;
-  font-size: 10px;
+  font-weight: 700;
+  font-size: 14px;
   line-height: 111%;
 }
 .actions-item {

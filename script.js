@@ -44,10 +44,22 @@ for (let i = 0; i < allDetailsRepair.length; i++) {
    }
 }
 //removing class "display" for undisplaying popUpWindow
-popUpClose.addEventListener('click', () => {
-   popUp.classList.remove('display');
-   document.documentElement.classList.remove('display');
-});
+// popUpClose.addEventListener('click', () => {
+//    popUp.classList.remove('display');
+//    document.documentElement.classList.remove('display');
+// });
+
+document.addEventListener('click', closePopUp);
+function closePopUp(e) {
+   const targetItem6 = e.target;
+   if (targetItem6.classList.contains('popUp') ) {
+      console.log(targetItem6);
+      popUp.classList.remove('display');
+      document.documentElement.classList.remove('display');
+   }
+}
+
+
 
 
 
