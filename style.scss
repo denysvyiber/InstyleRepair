@@ -96,7 +96,7 @@ body {
 }
 /* -------------------------------------- */
 [class*="__container"] {
-   max-width: 1440px;
+   // max-width: 4440px;
    margin: 0 auto;
    // padding: 0 15px;
    box-sizing: border-box;
@@ -580,6 +580,7 @@ body {
    }
 
    &__search {
+      
       flex: 0 1 17.152778%; /* 247/1440 */
       min-height: 40px;
       position: relative;
@@ -611,6 +612,7 @@ body {
    justify-content: center;
    position: relative;
    z-index: 6;
+   // display: none;
    // &::before {
    //    position: absolute;
    //    top: calc(50% - 1px);
@@ -619,9 +621,22 @@ body {
    //    height: 20px;
    //    background: url("/img/header/search.svg");
    // }
+  
    @media (max-width: 550px) {
-      display: none;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 55px auto auto auto;
+      padding: 0 0;
+      width: 150px;
+      height: 50px;
    }
+   @media (max-width: 1100px) {
+      max-width: 300px;
+   }
+   
    
    
    &__input{
@@ -631,6 +646,9 @@ body {
       height: 27px;
       position: relative;
       padding-left: 25px;
+      @media (max-width: 550px) {
+         width: 70%;
+      }
       input[type="text"]
          {
             background:rgba(0,0,0,0);
@@ -795,6 +813,19 @@ body {
       }
       
    }
+  
+   &__searchIcon {
+      background: url('../img/search-svgrepo-com.svg') 20px 4px  no-repeat;
+      background-size: 35px;
+      height: 100%;
+      width: 80px;
+      cursor: pointer;
+      @media (min-width: 550px) {
+         display: none;
+      }
+   }
+   
+
 
    &__icon {
    }
@@ -802,6 +833,9 @@ body {
 .menu-open .menu__body,
 .menu-open .menu__body::before {
    left: 0;
+}
+.search-open .search-header{
+   top: 0;
 }
 
 
@@ -864,8 +898,10 @@ body {
 
 
 // ========SIDEBAR===================================================================================
+
 .page{
    position: relative;
+  
 }
 .sidebar {
    
@@ -875,6 +911,11 @@ body {
       display: flex;
    }
 }
+.sideBar-open .sidebar__all{
+   left: 0;
+   z-index: 7;
+}
+
 
 .sidebar {
    padding-top: 50px;
@@ -882,6 +923,7 @@ body {
    &__all{
       
       position: fixed;
+      
       min-width: 200px;
       padding: 10px 15px;
       flex: 0 0 20.408163%; /* 300/1470 */
@@ -892,9 +934,13 @@ body {
       // position: fixed;
       // // top: 100px;
       // width: 18%;
-   
+      @media (max-width: 860px) {
+         left: -200%;
+      }
       
    }
+   
+   
    
    &__repairs {
       background: rgba(255, 255, 255, 0.7);
@@ -1013,6 +1059,9 @@ body {
    background-color: #fff;
    min-height: 100vh;  
    overflow: auto;
+   @media (max-width: 860px) {
+      padding-left: 20px;
+   }
    &__items {
       display: flex;
       flex-direction: column;
@@ -1104,9 +1153,20 @@ body {
          background-repeat: norepeat;
          background-position: 250px center;
          background-size: 100% 100%;
+         @media (max-width: 1300px) {
+            background-position: 150px center;
+         }
+         @media (max-width: 1000px) {
+            background-position: 100px center;
+         }
+         @media (max-width: 900px) {
+            background-position: 50px center;
+         }
       }
+      }
+        
       
-   }
+   
 
    &__actions {
       margin: 0 auto;
@@ -1155,9 +1215,26 @@ body {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      width: 700px
+      width: 1000px;
+      @media (max-width: 1900px) {
+         width: 880px;
+         }
+      @media (max-width: 1700px) {
+         width: 750px;
+         }
+      @media (max-width: 1500px) {
+         width: 630px;
+         }
+      @media (max-width: 1300px) {
+         width: 500px;
+         }
+      @media (max-width: 1100px) {
+         width: 400px;
+         }
+      @media (max-width: 1000px) {
+      width: 300px;
+      }
       
-     
    }
 
    &__passAndTimes {

@@ -60,6 +60,25 @@ function closePopUp(e) {
 }
 
 
+//виклик пошуку по натиску на іконку
+document.addEventListener('click', searchClick);
+function searchClick(e) {
+   const targetItem = e.target;
+
+   if (targetItem.closest('.menu__searchIcon')) {
+      document.documentElement.classList.toggle('search-open');
+   }
+}
+document.addEventListener('click', sideBarClick);
+function sideBarClick(e) {
+   const targetItem = e.target;
+   if (targetItem.closest('.header__logo') ) {
+      document.documentElement.classList.toggle('sideBar-open');
+   }
+}
+
+
+
 
 
 
